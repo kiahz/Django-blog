@@ -120,6 +120,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = ( os.path.join(BASE_DIR,'assets'),)
 #baraye ezafe krdn file haye css va ...
 #va ye import os baraye import os dr inja avale kod zdim
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+#baraye dast resi be file haye media in dota kod bala lazeme
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
