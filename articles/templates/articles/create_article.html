@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html'  %}
+{% block content %}
+    <div class="creat-article ">
+    <h1>
+        create your article
+    </h1>
+    <form class="site-form" action="{%  url 'articles:Create' %}" method="post" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" name=""  value="create">
+    </form>
+    </div>
+{% endblock %}
