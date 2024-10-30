@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
 </head>
 <body>
-<h2><a href="{% url 'articles:List' %}">LOGO</a></h2>
+<header>
+    <h2><a href="{% url 'articles:List' %}">LOGO</a></h2>
 <nav>
     <ul>
         {% if user.is_authenticated %}
@@ -22,7 +23,7 @@
             </form>
         </li>
             <li>
-            <a href = "{% url 'articles:Create' %}">Create new article</a>
+            <a class="highlight"  href = "{% url 'articles:Create' %}">Create new article</a>
             </li>
         {% else %}
             <li>
@@ -34,6 +35,7 @@
         {% endif %}
     </ul>
 </nav>
+</header>
 <div class =wrapper >
 
     {% block content %}

@@ -4,7 +4,7 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
-
+from articles.views import articles_list
 
 #for ezafe shodn in urls hamon
 urlpatterns = [
@@ -12,7 +12,7 @@ urlpatterns = [
     path('about/', views.about),
     path('contact/', views.contact),
     path('blog/', views.blog),
-    path('', views.home),
+    path('', articles_list ),
 
     path('articles/', include('articles.urls')),
     path('accounts/', include('accounts.urls')),
